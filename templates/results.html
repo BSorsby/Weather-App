@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Weather</title>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/results.css') }}">
+   </head>
+   <body>
+      <!-- <nav>
+         <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+         </ul>
+     </nav> -->
+      <div class="results">
+         <h2>Current weather in {{ location }}, ({{ country }})</h2>
+         <h3>{{ temp }}° C</h3>
+         <h3>Weather: {{ weather }}</h3>
+         <h4>Feels like: {{ feels_like }}° C</h4>
+         <h4>Minimum Temperature: {{ temp_min }}° C</h4>
+         <h4>Maximum Temperature: {{ temp_max }}° C</h4>
+     </div>
+     <div class="back_button">
+     <a href="{{ url_for('home') }}"><button>Back to Homepage</button></a>
+     </div>
+   </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Weather</title>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
+   </head>
+   <body>
+    <!-- <nav>
+        <ul class="menu">
+           <li><a href="{{ url_for('home') }}">Home</a></li>
+        </ul>
+    </nav> -->
+   <div class="main">
+      <h1> Weather App </h1>
+      <p> Select a city and click Submit for the current weather</p>
+      <form id="weatherForm" action="{{ url_for('get_results') }}" method="post">
+      <input type="text" id="weatherInput" placeholder="Enter a City" name="city">
+      <br>
+      <a href="./city.html"><input type="submit" class="submitButton" value="Submit"></a>
+      </form>
+   </div>
+   </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <title>Weather</title>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/results.css') }}">
+</head>
+
+<body>
+   <div class="results">
+      <h1>Oh-no..</h1>
+      <h2>Error: "{{city}}" not found</h2>
+      <p>Go back to the home page to try again</p>
+      <p>{{url}}</p>
+   </div>
+   <div class="back_button">
+      <a href="{{ url_for('home') }}"><button>Back to Homepage</button></a>
+   </div>
+</body>
+
+</html>
